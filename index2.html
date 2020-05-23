@@ -1,0 +1,571 @@
+<!-- 
+
+  Grey: #A1A1A1
+  Blue: #3E92CC
+
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!--
+  Customize this policy to fit your own app's needs. For more guidance, see:
+      https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+  Some notes:
+      * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+      * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+      * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+          * Enable inline JS: add 'unsafe-inline' to default-src
+  -->
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="theme-color" content="#2196f3">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+  <link rel="manifest" href="icons/site.webmanifest">
+  <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="icons/favicon.ico">
+  <meta name="apple-mobile-web-app-title" content="Ignition">
+  <meta name="application-name" content="Ignition">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="icons/browserconfig.xml">
+  <title>Ignition</title>
+  <!-- Search Engine -->
+  <meta name="description" content="Ignition is the #1 iOS 3rd Party AppStore that cares about its users.">
+  <meta name="image" content="https://ignition.fun/images/banner.png">
+  <!-- Schema.org for Google -->
+  <meta itemprop="name" content="Ignition Installer">
+  <meta itemprop="description" content="Ignition is the #1 iOS 3rd Party AppStore that cares about its users.">
+  <meta itemprop="image" content="https://ignition.fun/images/banner.png">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ignition Installer">
+  <meta name="twitter:description" content="Ignition is the #1 iOS 3rd Party AppStore that cares about its users.">
+  <meta name="twitter:site" content="@useignition">
+  <meta name="twitter:creator" content="@useignition">
+  <meta name="twitter:image:src" content="https://ignition.fun/images/twitter.png">
+  <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+  <meta name="og:title" content="Ignition Installer">
+  <meta name="og:description" content="Ignition is the #1 iOS 3rd Party AppStore that cares about its users.">
+  <meta name="og:image" content="https://ignition.fun/images/facebook.png">
+  <meta name="og:url" content="https://ignition.fun">
+  <meta name="og:site_name" content="Ignition Installer">
+  <meta name="og:type" content="website">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <link rel="stylesheet" href="framework7/css/framework7.min.css">
+  <link rel="stylesheet" href="css/icons.css">
+  <link rel="stylesheet" href="css/app.css?v1=2">
+  <script type="text/javascript" src="js/inobounce.js"></script>
+  <script type="text/javascript">
+    iNoBounce.enable();
+  </script>
+  <!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-2159753724070686",
+            enable_page_level_ads: true
+       });
+  </script> -->
+  <style type="text/css">
+    .ignitionIcon {
+      /*-webkit-animation: breathing 4s ease-out infinite normal;*/
+      /*animation: breathing 4s ease-out infinite normal;*/
+    }
+
+    .ignitionText {
+      margin-top: 10px;
+      animation: move 2s linear infinite;
+      background-image: linear-gradient(to right, #fe8a71, #f6cd61, #3da4ab, #0e9aa7, #fe8a71);
+      background-size: 200% auto;
+      font-size: 40px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    @keyframes move { to { background-position: 200% center; } }
+
+    @-webkit-keyframes breathing {
+      0% {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+      }
+
+      25% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+      }
+
+      60% {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+      }
+
+      100% {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+      }
+    }
+
+    @keyframes breathing {
+      0% {
+        -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        transform: scale(0.9);
+      }
+
+      25% {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+      }
+
+      60% {
+        -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        transform: scale(0.9);
+      }
+
+      100% {
+        -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        transform: scale(0.9);
+      }
+    }
+
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122003680-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-122003680-1');
+  </script>
+</head>
+<body class="theme-dark">
+  <script async="async" data-cfasync="false" src="//tharbadir.com/2?z=1815106"></script>
+  <script async="async" data-cfasync="false" src="//tharbadir.com/2?z=1817666"></script>
+  <div id="app">
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar"></div>
+    <!-- Left panel with cover effect-->
+    <div class="panel panel-left panel-cover theme-dark">
+      <div class="view">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="title">Left Panel</div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="block">Left panel content goes here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Right panel with reveal effect-->
+    <div class="panel panel-right panel-reveal theme-dark">
+      <div class="view">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="title">Right Panel</div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="block">Right panel content goes here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Views/Tabs container -->
+    <div class="views tabs ios-edges">
+      <!-- Tabbar for switching views-tabs -->
+      <div class="toolbar tabbar tabbar-labels toolbar-bottom-md">
+        <div class="toolbar-inner">
+          <a href="#view-home" class="tab-link tab-link-active">
+            <img class="icon ios-only" src="img/home-grey.png" width="26px" height="26px"></i>
+            <img class="icon ios-only icon-ios-fill" src="img/home-blue.png" width="26px" height="26px"></i>
+            <!-- <i class="icon material-icons md-only">home</i> -->
+            <!-- <span class="tabbar-label">Home</span> -->
+          </a>
+          <a href="#view-catalog" class="tab-link">
+            <img class="icon ios-only" src="img/packages-grey.png" width="26px" height="26px"></i>
+            <img class="icon ios-only icon-ios-fill" src="img/packages-blue.png" width="26px" height="26px"></i>
+            <!-- <span class="tabbar-label">Apps</span> -->
+          </a>
+          <!-- <a href="#view-exoresign" class="tab-link">
+            <img class="icon ios-only" src="img/exoresign-grey.png" width="26px" height="26px"></i>
+            <img class="icon ios-only icon-ios-fill" src="img/exoresign-blue.png" width="26px" height="26px"></i>
+          </a> -->
+          <a href="#view-news" class="tab-link">
+            <img class="icon ios-only" src="img/news-grey.png" width="26px" height="26px"></i>
+            <img class="icon ios-only icon-ios-fill" src="img/news-blue.png" width="26px" height="26px"></i>
+            <!-- <i class="icon material-icons md-only">home</i> -->
+            <!-- <span class="tabbar-label">Home</span> -->
+          </a>
+          <a href="#view-search" class="tab-link">
+            <img class="icon ios-only" src="img/search-grey.png" width="26px" height="26px"></i>
+            <img class="icon ios-only icon-ios-fill" src="img/search-blue.png" width="26px" height="26px"></i>
+          </a>
+        </div>
+      </div>
+      <!-- Your main view/tab, should have "view-main" class. It also has "tab-active" class -->
+      <div id="view-home" class="view view-main tab tab-active">
+        <!-- Page, data-name contains page name which can be used in page callbacks -->
+        <div class="page" data-name="home">
+          <!-- Top Navbar -->
+          <div class="navbar">
+            <div class="navbar-inner">
+              <!-- <div class="left">
+                <a href="#" class="link icon-only panel-open" data-panel="left">
+                  <i class="icon f7-icons ios-only" style="color: #FFF;">menu</i>
+                  <i class="icon material-icons md-only" style="color: #FFF;">menu</i>
+                </a>
+              </div> -->
+              <div class="title sliding">Home</div>
+              <div class="right">
+                <div class="chip" style="font-weight: 500;">
+                  <div class="chip-media bg-color-blue">
+                    <img src="img/Revokes.png" width="24px" height="24px" style="border-radius: 50%;">
+                  </div>
+                  <div class="chip-label status">Checking</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Scrollable page content-->
+          <div class="page-content">
+            <div class="block">
+              <center>
+                <img src="img/ignitionLogo.svg" width="60px" class="ignitionIcon">
+                <h1 class="ignitionText">Ignition</h1>
+              </center>
+            </div>
+            <!-- <div class="block">
+              <h3>If you are accessing this from a previous webclip you need to delete the current webclip and readd it from app.ignition.fun. Thank you.</h3>
+            </div> -->
+            <center>
+              <br>
+              <!-- <div class="content-block-title">Advertisement</div> -->
+              <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+              <!-- UseIgnition Banner -->
+              <ins class="adsbygoogle"
+                   style="display:inline-block;width:95%;height:100px"
+                   data-ad-client="ca-pub-2159753724070686"
+                   data-ad-slot="7296630504"></ins>
+              <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+              </script>
+            </center>
+            <div class="list">
+              <ul>
+                <li>
+                  <a href="undecimus://jailbreak" class="external item-link item-content">
+                    <div class="item-media"><img src="https://github.com/pwn20wndstuff/Undecimus/raw/master/Undecimus/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40%403x.png" class="lazy lazy-fade-in" width="42px" height="42px" style="border-radius: 10px;"></div>
+                    <div class="item-inner">
+                      <div class="item-title">
+                        <div class="item-header">Pwn20wnd</div>
+                        One-Click Jailbreak
+                        <div class="item-footer">unc0ver must be installed</div>
+                      </div>
+                      <div class="item-after"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://youtube.com/fce365official" class="external item-link item-content">
+                    <div class="item-media"><img src="https://fce365.info/wp-content/uploads/2019/06/yt.png" class="lazy lazy-fade-in" width="42px" height="42px" style="border-radius: 10px;"></div>
+                    <div class="item-inner">
+                      <div class="item-title">
+                        <div class="item-header">iOS and Jailbreak Tutorials &amp; News</div>
+                        SUBSCRIBE!
+                        <div class="item-footer">iDevice Central</div>
+                      </div>
+                      <div class="item-after"></div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="block-title">General</div>
+            <div class="list">
+              <ul>
+                <li>
+                  <a href="/about/" class="item-content item-link">
+                    <div class="item-inner">
+                      <div class="item-title">About</div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="/legal/" class="item-content item-link">
+                    <div class="item-inner">
+                      <div class="item-title">Legal</div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="block-title">Customization</div>
+            <div class="list">
+              <ul>
+                <li>
+                  <a href="/theming/" class="item-content item-link">
+                    <div class="item-inner">
+                      <div class="item-title">Theming</div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="item-content item-link">
+                    <div class="item-inner">
+                      <div class="item-title">Language (W.I.P)</div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <br>
+            <center>
+              <div class="block">
+                <p><span id="device"></span>, iOS <span id="version"></span>, Ignition 4.0</p>
+              </div>
+            </center>
+          </div>
+        </div>
+      </div>
+
+      <!-- Catalog View -->
+      <div id="view-catalog" class="view tab catalogTab">
+        <!-- Catalog page will be loaded here dynamically from /catalog/ route -->
+      </div>
+
+      <!-- ExoResign View -->
+      <!-- <div id="view-exoresign" class="view tab"> -->
+      <!-- </div> -->
+
+      <!-- News View -->
+      <div id="view-news" class="view tab newsTab">
+        <!-- News page will be loaded here dynamically from /news/ route -->
+      </div>
+
+      <!-- Settings View -->
+      <div id="view-search" class="view tab searchTab">
+      </div>
+    </div>
+
+    <!-- Popup -->
+    <div class="popup" id="installPopup">
+      <div class="view">
+        <div class="page">
+          <!-- <div class="navbar">
+            <div class="navbar-inner">
+              <div class="title">Popup</div>
+              <div class="right">
+                <a href="#" class="link popup-close">Close</a>
+              </div>
+            </div>
+          </div> -->
+          <div class="page-content">
+            <div class="fake-homescreen">
+                <a href="#" class="close-button popup-close" aria-label="Cancel"></a>
+                <div class="iphone-display" aria-hidden="true">
+                    <div class="app-icon-area">
+                        <div class="app-icon-region">
+                          <img alt="app icon" src="https://ipas.fun/images/123_movies.png" class="app-icon" style="width: 33px; height: 33px;">
+                        </div>
+                        <div class="fake-homescreen-app-name"><span class="installingAppName">123 Movies</span></div>
+                    </div>
+                </div>
+            </div>
+            <center>
+              <div class="block-title installing-text">Installing <span class="installingAppName">123 Movies</span></div>
+              <p class="progress-text">Go to home screen to check progress.</p>
+            </center>
+            <br>
+            <center>
+              <br>
+              <!-- <div class="content-block-title">Advertisement</div> -->
+              <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+              <!-- UseIgnition Banner -->
+              <ins class="adsbygoogle"
+                   style="display:inline-block;width:95%;height:100px"
+                   data-ad-client="ca-pub-2159753724070686"
+                   data-ad-slot="7296630504"></ins>
+              <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+              </script>
+            </center>
+            <br>
+            <div class="block-title help-text">Help</div>
+            <div class="list accordion-list">
+              <ul>
+                <li class="accordion-item">
+                  <a href="#" class="item-content item-link">
+                    <div class="item-inner">
+                      <div class="item-title" style="white-space: inherit;">How to fix Untrusted Enterprise Developer?</div>
+                    </div>
+                  </a>
+                  <div class="accordion-item-content">
+                    <div class="block">
+                      <p>In order to use any application install from Ignition, you will need to trust the enterprise certificate we are currently using.</p>
+                      <p>In order to trust these certificates you need to go to <b>Settings -> General -> Profiles or Profiles and Device Management</b>. Under the <b>Enterprise App</b> title, you will see a link which say the name on the Untrusted Enterprise Developer. Tap this link and tap on Trust. You will need to confirm you want to trust the profile, after doing that apps should now launch.</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordion-item">
+                  <a href="#" class="item-content item-link">
+                    <div class="item-inner">
+                      <div class="item-title" style="white-space: inherit;">Why do I get the "Unable to Download App" error?</div>
+                    </div>
+                  </a>
+                  <div class="accordion-item-content">
+                    <div class="block">
+                      <p>Usually this error may happen when Apple has revoked our certificate.</p>
+                      <p>If Apple has revoked our certificate you will have to wait a few hours for us to fix this.</p>
+                      <p>Another reason may be that you already have an app install with the same Bundle ID.</p>
+                      <p>To fix this you need to remove any versions of the app you are trying to install that you may currently have on your device.</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordion-item">
+                  <a href="#" class="item-content item-link">
+                    <div class="item-inner">
+                      <div class="item-title" style="white-space: inherit;">I don't get a prompt to install the app.</div>
+                    </div>
+                  </a>
+                  <div class="accordion-item-content">
+                    <div class="block">
+                      <p>Sometimes it may take a few seconds for the prompt to show up due to server load or internet speeds.</p>
+                      <p>So, just be patient. If you have been waiting for more than a minute try restarting Ignition.</p>
+                      <p>If that doesn't work, try a new internet connection and try again.</p>
+                      <p>Finally, if all else fails, send us a Direct Message on Twitter @ignition and we will try help you solve the problem.</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Login Screen -->
+    <div class="login-screen" id="my-login-screen">
+      <div class="view">
+        <div class="page">
+          <div class="page-content login-screen-content">
+            <div class="login-screen-title">Login</div>
+            <div class="list">
+              <ul>
+                <li class="item-content item-input">
+                  <div class="item-inner">
+                    <div class="item-title item-label">Username</div>
+                    <div class="item-input-wrap">
+                      <input type="text" name="username" placeholder="Your username">
+                    </div>
+                  </div>
+                </li>
+                <li class="item-content item-input">
+                  <div class="item-inner">
+                    <div class="item-title item-label">Password</div>
+                    <div class="item-input-wrap">
+                      <input type="password" name="password" placeholder="Your password">
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="list">
+              <ul>
+                <li>
+                  <a href="#" class="item-link list-button login-button">Sign In</a>
+                </li>
+              </ul>
+              <div class="block-footer">Some text about login information.<br>Click "Sign In" to close Login Screen</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Cordova -->
+  <!--
+  <script src="cordova.js"></script>
+  -->
+
+  <!-- Framework7 library -->
+  <script src="framework7/js/framework7.min.js"></script>
+
+  <!-- App routes -->
+  <script src="js/routes.js?23423542532343243243244=235934982894342434234324234"></script>
+
+  <!-- Your custom app scripts -->
+  <script src="js/app.js?2352523234234234234234324234=2342343242542234234324324345"></script>
+  <script type="text/javascript" src="js/device.class.js"></script>
+  <script type="text/javascript">
+    if (localStorage.getItem('theme')) { $$("body").removeClass('theme-dark').removeClass('theme-light').removeClass('theme-dark-2').removeClass('theme-oled').addClass(localStorage.getItem('theme')); }
+    if (localStorage.getItem('color-theme')) { $$("body").addClass(localStorage.getItem('color-theme')); }
+    // var fixer = setInterval(function() {
+    //   if ($$("[id^=id]").length) {
+    //     sessionStorage.setItem('shownAds', 'yes');
+    //   } else if (!$$("[id^=id]").length && sessionStorage.getItem('shownAds') == "yes") {
+    //     console.log('Should remove shit');
+    //     $$("body").css('margin-top', '-44px');
+    //     // homeView.router.refreshPage();
+    //     sessionStorage.removeItem('shownAds');
+    //     clearInterval(fixer);
+    //   }
+    // }, 1000);
+    app.request.get('https://ignition.fun/statusKKKK.txt', function (data) {
+      console.log(data);
+      $$(".status").text(data);
+    });
+    setInterval(function() {
+      // $$.ajax({
+      //   url: 'https://ignition.fun/statusKKKK.txt',
+      //   type: 'GET',
+      //   success: function(data) {
+      //     $$(".status").text(data);
+      //   }
+      // });
+      app.request.get('https://ignition.fun/statusKKKK.txt', function (data) {
+        console.log(data);
+        $$(".status").text(data);
+      });
+    }, 5000);
+
+    var device = new Device();
+
+    $$("#device").text(device.product_name());
+    $$("#version").text(device.version());
+
+    app.dialog.create({
+        title: 'Notice',
+        text: 'Our official Twitter account has been suspended (@ignition). We are talking with Twitter in an attempt to get it back. For now, you can follow @i0sd3v on Twitter for updates on Ignition. Any accounts saying they\'re Ignition, are not unless stated here or on @i0sd3v.',
+        buttons: [
+          {
+            text: 'Follow @i0sd3v',
+            onClick: function(dialog, e) {
+            	window.open("https://twitter.com/i0sd3v", "_blank");
+            }
+          },
+          {
+            text: 'Close',
+          },
+        ],
+        verticalButtons: true,
+      }).ope();
+    
+  </script>
+</body>
+</html>
